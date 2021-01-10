@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        <style>
+body {
+  text-align: center;
+  color: rgb(248, 0, 0);
+  overflow-x:hidden;
+}
+
+p {
+  font-size: 13px;
+  margin: 15px auto;
+}
+
+.will-fadeIn1 {
+  display: block;
+  width: 64px;
+  max-width: 64px;
+  margin: 0;
+  height: 64px;
+  background-color: #233535;
+  padding: 10px;
+}
+            
+  .will-fadeIn1:nth-child(odd) {
+    background: #ff0000;
+  }
+  .will-fadeIn1:first-child {
+    height: auto;
+    background-color: #edffff;
+  }
+  
+  .fadeInTop {
+    animation: fadeInTop 1s ease 1s both;
+  }
+  @media (prefers-reduced-motion) {
+    .fadeInTop .animated {
+      animation: unset !important;
+      transition: none !important;
+    }
+  }
+  
+  .fadeInBottom {
+    animation: fadeInBottom 2s ease 2s both;
+  }
+  @media (prefers-reduced-motion) {
+    .fadeInBottom .animated {
+      animation: unset !important;
+      transition: none !important;
+    }
+  }
+  
+  
+  
+  @keyframes fadeInTop {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+      
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      
+    }
+  }
+  
+  @keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translate3d(100%,0,0);
+      transform: rotateY(10) rotateZ(10);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transform: rotateY(-10) rotateZ(-10);
+    }
+  }
+
+  
+        </style>
+    </head>
+    <body><main>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+        <div class="will-fadeIn1"></div>
+    </main>
+
+        <script>
+            function Utils() {}
+            Utils.prototype = {
+              constructor: Utils,
+              isElementInView: function(element, fullyInView) {
+                var pageTop = $(window).scrollTop();
+                var pageBottom = pageTop + $(window).height();
+                var elementTop = $(element).offset().top;
+                var elementBottom = elementTop + $(element).height();
+            
+                if (fullyInView === true) {
+                  return pageTop < elementTop && pageBottom > elementBottom;
+                } else {
+                  return elementTop <= pageBottom && elementBottom >= pageTop;
+                }
+              }
+            };
+            
+            var Utils = new Utils();
+            $(window).on("load", addFadeIn());
+            
+            $(window).scroll(function() {
+              addFadeIn(true);
+            });
+            
+            function addFadeIn(repeat) {
+              var classToFadeIn = ".will-fadeIn1";
+            
+              $(classToFadeIn).each(function(index) {
+                var isElementInView = Utils.isElementInView($(this), false);
+                if (isElementInView) {
+                  if (!$(this).hasClass("fadeInTop") && !$(this).hasClass("fadeInBottom")) {
+                    if (index % 2 == 0) $(this).addClass("fadeInTop");
+                    else $(this).addClass("fadeInBottom");
+                  }
+                } else if (repeat) {
+                  $(this).removeClass("fadeInTop");
+                  $(this).removeClass("fadeInBottom");
+                }
+              });
+            }
+            
+            </script>
+    </body>
+</html>

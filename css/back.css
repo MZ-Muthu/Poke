@@ -1,0 +1,94 @@
+.back1 {
+  background: url("../img/s1e1/1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width: 100%;
+  text-align: center;
+  background-position:center;
+  -webkit-animation: zoomeffect 10s infinite;
+  -moz-animation: zoomeffect 10s infinite;
+}
+.back2 {
+  background: url("../img/s1e1/2.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width: 100%;
+  text-align: center;
+  background-position:center;
+  -webkit-animation: zoomeffect 10s infinite;
+  -moz-animation: zoomeffect 10s infinite;
+}
+.back3 {
+  background: url("../img/s1e1/3.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width: 100%;
+  text-align: center;
+  background-position:center;
+  -webkit-animation: zoomeffect 10s infinite;
+  -moz-animation: zoomeffect 10s infinite;
+}
+
+.back4 {
+  background: url("../img/s1e1/4.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width: 100%;
+  text-align: center;
+  background-position:center;
+}
+
+.back5 {
+  background: url("../img/s1e1/5.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width: 100%;
+  text-align: center;
+  background-position:center;
+  -webkit-animation: zoomeffect 10s infinite;
+  -moz-animation: zoomeffect 10s infinite;
+}
+
+
+.back6 {
+  background: url("../img/s1e1/12.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width: 100%;
+  text-align: center;
+  background-position:center;
+  -webkit-animation: zoomeffect 10s infinite;
+  -moz-animation: zoomeffect 10s infinite;
+}
+
+.back7 {
+  background: url("../img/s1e1/16.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width: 100%;
+  text-align: center;
+  background-position:center;
+  -webkit-animation: zoomeffect 10s infinite;
+  -moz-animation: zoomeffect 10s infinite;
+}
